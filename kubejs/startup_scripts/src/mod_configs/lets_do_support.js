@@ -22,6 +22,10 @@ RequestHandler.tooltips.add([
   ['farm_and_charm:chicken_coop', [Text.translate('letsDo.tooltip.chickenCoop')]]
 ])
 
+RequestHandler.tags.item.add([
+  ['farm_and_charm:strawberries', 'farm_and_charm:strawberry']
+])
+
 // support fish tank
 RequestHandler.callbacks.blockEventsBrokenSingle(event => {
   if (['furniture:copper_fish_tank', 'furniture:iron_fish_tank'].includes(event.block.id)) {
