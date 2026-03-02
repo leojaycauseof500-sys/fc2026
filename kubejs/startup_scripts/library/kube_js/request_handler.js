@@ -141,7 +141,15 @@ const RequestHandler = {
       inventoryChanged (callbacks) {
         this.inventoryChangedCache = this.inventoryChangedCache.concat(callbacks)
       },
-      inventoryChangedCache: []
+      inventoryChangedCache: [],
+      loggedIn (callbacks) {
+        this.loggedInCache = this.loggedInCache.concat(callbacks)
+      },
+      loggedInCache: [],
+      tick (callbacks) {
+        this.tickCache = this.tickCache.concat(callbacks)
+      },
+      tickCache: []
     },
     serverEvents: {
       loaded (callbacks) {
@@ -151,7 +159,11 @@ const RequestHandler = {
       beforeServerEventsRecipes (callbacks) {
         this.beforeServerEventsRecipesCache = this.beforeServerEventsRecipesCache.concat(callbacks)
       },
-      beforeServerEventsRecipesCache: []
+      beforeServerEventsRecipesCache: [],
+      tick (callbacks) {
+        this.tickCache = this.tickCache.concat(callbacks)
+      },
+      tickCache: []
     },
     beforeClientLoaded (callbacks) {
       this.beforeClientLoadedCache = this.beforeClientLoadedCache.concat(callbacks)

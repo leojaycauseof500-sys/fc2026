@@ -42,4 +42,16 @@ BlockEvents.broken(event => {
   global.BlockEventsBroken(event)
 })
 
+PlayerEvents.loggedIn(event => {
+  global.PlayerEventsLoggedIn(event)
+})
+
+ServerEvents.tick(event => {
+  global.ServerEventsTick(event)
+})
+
+PlayerEvents.tick(event => {
+  global.PlayerEventsTick(event)
+})
+
 global.beforeServerHooksCallback()

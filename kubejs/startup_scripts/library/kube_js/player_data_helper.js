@@ -51,6 +51,9 @@ const PlayerDataHelper = {
       return {}
     }
   },
+  getPlayerData (event, key) {
+    return EventHelpers.playerData(event)[key]
+  },
   setPlayerData (event, key, val) {
     EventHelpers.playerData(event)[key] = val
   },

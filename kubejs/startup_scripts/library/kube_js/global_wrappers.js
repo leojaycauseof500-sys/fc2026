@@ -176,3 +176,19 @@ global.BlockEventsBroken = (event) => {
     callback(event)
   })
 }
+
+global.PlayerEventsLoggedIn = (event) => {
+  RequestHandler.callbacks.playerEvents.loggedInCache.forEach(callback => {
+    callback(event)
+  })
+}
+global.ServerEventsTick = (event) => {
+  RequestHandler.callbacks.serverEvents.tickCache.forEach(callback => {
+    callback(event)
+  })
+}
+global.PlayerEventsTick = (event) => {
+  RequestHandler.callbacks.playerEvents.tickCache.forEach(callback => {
+    callback(event)
+  })
+}
